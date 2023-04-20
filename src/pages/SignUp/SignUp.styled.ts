@@ -1,21 +1,25 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`    
-    height: 100vh;
-    width: 100%;
+const flex = `
     display: flex;
     justify-content: center;
+`
+
+export const Container = styled.div`  
+    ${flex}
+    align-items: center;
+    height: 100vh;
+    width: 100%;
     
     .login-container{
+        ${flex}
         background-color: var(--white);
         width: 450px;
         height: 550px;
         margin-top: 50px;
         padding: 10px;
-        display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
         gap: 25px;
         border-radius: 15px;
         color: var(--black);
@@ -38,15 +42,14 @@ export const Container = styled.div`
         };
 
         .btn-container{
+            ${flex}
             width: 100%;
-            display: flex;
             flex-direction: column;
             align-items: center;
             gap: 5px;
 
             > button {
-                display: flex;
-                justify-content: center;
+                ${flex}
                 align-items: center;
                 gap: 10px;
                 border-color: var(--gray);
@@ -60,9 +63,8 @@ export const Container = styled.div`
         };
 
         .paragrafo-container{
+            ${flex}
             width: 100%;
-            display: flex;
-            justify-content: center;
             gap: 5px;
             color: var(--gray);
 
@@ -74,8 +76,8 @@ export const Container = styled.div`
         };
 
         form {
+            ${flex}
             width: 100%;
-            display: flex;
             align-items: center;
             flex-direction: column;
             gap: 5px;
@@ -87,7 +89,7 @@ export const Container = styled.div`
         };
 
         .signup-container {
-            display: flex;
+            ${flex}
             flex-direction: column;
             align-items: center;
             margin-top: 20px;
@@ -97,8 +99,6 @@ export const Container = styled.div`
                 text-decoration: none;
                 transition: .2s;
             };
-        };
-        
+        };        
     }
-
 `;
